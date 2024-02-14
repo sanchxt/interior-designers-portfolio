@@ -1,0 +1,112 @@
+@import "../../app.scss";
+
+.hero {
+  height: calc(100vh - 100px);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  background: #355c7d;
+  background: -webkit-linear-gradient(180deg, #c06c84, #6c5b7b, #355c7d);
+  background: linear-gradient(180deg, #c06c84, #6c5b7b, #355c7d);
+
+  .wrapper {
+    max-width: 1366px;
+    height: 100%;
+    margin: auto;
+
+    .textContainer {
+      width: 70%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+
+      h2 {
+        font-size: 30px;
+        color: rebeccapurple;
+        letter-spacing: 10px;
+      }
+
+      h1 {
+        font-size: 78px;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 30px;
+
+        button {
+          padding: 20px;
+          border: 1px solid white;
+          border-radius: 10px;
+          color: white;
+          cursor: pointer;
+          font-weight: 300;
+        }
+      }
+
+      img {
+        width: 50px;
+      }
+    }
+  }
+
+  .slidingTextContainer {
+    position: absolute;
+    z-index: -1;
+    font-size: 50vh;
+    bottom: -120px;
+    white-space: nowrap;
+    color: #ffffff15;
+    width: 50%;
+    font-weight: bold;
+  }
+
+  .imgContainer {
+    height: 710px;
+    width: 710px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    .slide-container {
+      width: 500px;
+      height: 280px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.not-selectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.slider {
+  height: 100%;
+  position: relative;
+  top: 50%;
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 100px;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .slides {
+    width: 100%;
+    height: 100%;
+    border-radius: 7%;
+    background-position: center;
+    background-size: cover;
+  }
+}
